@@ -1,0 +1,26 @@
+@mixin background-gradient($start-color, $end-color) {
+  background: $start-color; /* Old browsers */
+  background: -moz-linear-gradient(top,  $start-color 0%, $end-color 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-color), color-stop(100%,$end-color)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  $start-color 0%,$end-color 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  $start-color 0%,$end-color 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  $start-color 0%,$end-color 100%); /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$start-color}', endColorstr='#{$end-color}',GradientType=0 ); /* IE6-8 */
+}
+
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1;
+  }
+}
+
+@mixin border-radius( $px ) {
+  -webkit-border-radius: $px;
+  -moz-border-radius: $px;
+  border-radius: $px;
+}

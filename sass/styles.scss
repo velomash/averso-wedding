@@ -1,0 +1,576 @@
+@import 'reset';
+@import 'mixins';
+@import url(http://fonts.googleapis.com/css?family=Tulpen+One);
+
+body {
+	font-family: Verdana, tahoma, sans-serif;
+}
+
+section {
+	position: relative;
+	width: 100%;
+	padding-top: 28px;
+	.container {
+		position: relative;
+		max-width: 960px;
+		margin: 0 auto;
+		text-align: center;
+		@include clearfix;
+		-webkit-transition-property: top;
+		-webkit-transition-duration: 20ms;
+	}
+	nav {
+		width: 40px;
+		height: 39px;
+		margin: 2em auto 0 auto;
+		cursor: pointer;
+		clear: both;
+		@include background-image-retina('../img/nav-btns', 'png', 40px, 39px);
+	}
+	.edge {
+		position: absolute;
+		bottom: -19px;
+		left: 0;
+		display: block;
+		border: 0;
+		width: 100%;
+		height: 19px;
+		margin: 0;
+		background-image: url('../img/topper.png');
+		background-color: transparent;
+		background-repeat: repeat-x;
+		background-position: top left;
+	}
+	@media screen and (max-width: 520px) {
+		padding: 42px 0;
+		nav {
+			display: none;
+		}
+	}
+}
+#countdown, #clothes, #directions {
+	background-color: #e8e8e8;
+}
+#their-story, #rsvp {
+	background-color: #7ac1c8;
+}
+
+#countdown {
+	h1 {
+		display: block;
+		width: 306px;
+		height: 457px;
+		font-size: 1px;
+		color: #E8E8E8;
+		margin: 0 auto;
+		@include background-image-retina('../img/bride-and-groom', 'png', 306px, 457px);
+		background-position: top center;
+		background-repeat: no-repeat;
+	}
+	&:before {
+		content: ' ';
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		border: 0;
+		width: 100%;
+		height: 14px;
+		margin: 0;
+		background-image: url('../img/topper-dark.png');
+		background-repeat: repeat-x;
+		background-position: top left;
+	}
+	#wedding-time {
+		color: #837c7c;
+		font-size: 10px;
+		font-weight: bold;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 1.5em 0;
+		display: block;
+	}
+	#until-wedding {
+		display: block;
+		width: 235px;
+		margin: 0 auto 0 auto;
+		font-family: 'Tulpen One', cursive;
+		font-size: 36px;
+		color: #bcbcbc;
+		@include clearfix;
+
+		div {
+			display: block;
+			float: left;
+			width: 37px;
+			height: 57px;
+			padding-top: 7px;
+			margin: 0 5px;
+			@include background-image-retina('../img/countdown-sprite', 'png', 37px, 320px);
+			background-position: no-repeat;
+		}
+		.days { background-position: 0 -64px; }
+		.hours { background-position: 0 -128px; }
+		.minutes { background-position: 0 -192px; }
+		.seconds { background-position: 0 -256px; }
+	}
+	@media screen and (max-width: 520px) {
+		padding-top: 28px;
+		h1 {
+			width: 240px;
+			height: 319px;
+			@include background-image-retina('../img/bride-and-groom-mobile', 'png', 240px, 319px);
+		}
+		#wedding-time {
+			margin: 1em 0;
+		}
+	}
+}
+
+#their-story {
+	.portrait {
+		width: 180px;
+		float: left;
+		margin: 0 56px;
+		figure {
+			margin: 1em 0;
+		}
+	}
+	.story {
+		width: 375px;
+		float: left;
+		margin-bottom: 2em;
+		h2 {
+			position: relative;
+			width: 248px;
+			height: 99px;
+			text-indent: -3000px;
+			overflow: hidden;
+			margin: 0 auto;
+			@include background-image-retina('../img/their-story', 'png', 248px, 99px);
+			background-repeat: no-repeat;
+			background-position: top center;
+		}
+		h4 {
+			position: relative;
+			width: 240px;
+			height: 20px;
+			top: 11px;
+			text-indent: -3000px;
+			overflow: hidden;
+			@include background-image-retina('../img/their-story-banner', 'png', 240px, 20px);
+			background-repeat: no-repeat;
+			background-position: top left;
+			margin: 1em auto 0 auto;
+		}
+		.story-text {
+			border-top: 2px dotted white;
+			border-bottom: 2px dotted white;
+			padding: 1em 0;
+		}
+		p {
+			color: #ffffff;
+			font-size: 12px;
+			line-height: 1.5em;
+			text-align: left;
+			margin: 1em 0;
+		}
+	}
+	.edge {
+		background-position: 0 -19px;
+	}
+	nav {
+		background-position: 0 -39px;
+	}
+	@media screen and (max-width: 1000px) {
+		.portrait {
+			display: none;
+		}
+		.story {
+			float: none;
+			margin: 0 auto;
+		}
+	}
+	@media screen and (max-width: 400px) {
+		.story {
+			width: 300px;
+			font-size: 9px;
+		}
+	}
+}
+
+#clothes {
+	h1 {
+		width: 445px;
+		height: 93px;
+		text-indent: -3000px;
+		overflow: hidden;
+		margin: 0 auto;
+		@include background-image-retina('../img/big-day', 'png', 445px, 93px);
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+	h3 {
+		max-width: 509px;
+		height: 20px;
+		text-indent: -3000px;
+		overflow: hidden;
+		@include background-image-retina('../img/semi-formal-banner', 'png', 509px, 20px);
+		background-repeat: no-repeat;
+		background-position: top center;
+		margin: 1em auto 2em auto;
+	}
+	figure {
+		width: 363px;
+		height: 384px;
+		margin: 0 auto;
+		@include background-image-retina('../img/clothes', 'png', 363px, 384px);
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+	nav {
+		background-position: 0 -78px;
+	}
+	@media screen and (max-width: 600px) {
+		h1 {
+			width: 280px;
+			height: 59px;
+			@include background-image-retina('../img/big-day-mobile', 'png', 280px, 59px);
+		}
+		figure {
+			width: 261px;
+			height: 289px;
+			@include background-image-retina('../img/clothes-mobile', 'png', 261px, 289px);
+		}
+	}
+}
+
+#directions {
+	h1 {
+		width: 445px;
+		height: 93px;
+		text-indent: -3000px;
+		overflow: hidden;
+		margin: 0 auto;
+		@include background-image-retina('../img/big-day', 'png', 445px, 93px);
+		background-repeat: no-repeat;
+		background-position: top center;
+	}
+	h3 {
+		max-width: 509px;
+		height: 20px;
+		text-indent: -3000px;
+		overflow: hidden;
+		@include background-image-retina('../img/where-banner', 'png', 509px, 20px);
+		background-repeat: no-repeat;
+		background-position: top center;
+		margin: 1em auto 2em auto;
+	}
+	.location, .drive {
+		display: inline-block;
+		margin: 0 1em;
+		background-repeat: no-repeat;
+		background-position: center center;
+		text-indent: -3000px;
+		overflow: hidden;
+	}
+	.roswell-united {
+		width: 155px;
+		height: 222px;
+		@include background-image-retina('../img/roswell-united', 'png', 155px, 222px);
+	}
+	.drive {
+		vertical-align: top;
+		width: 112px;
+		height: 150px;
+		@include background-image-retina('../img/20-min', 'png', 112px, 37px);
+	}
+	.brickyard {
+		width: 155px;
+		height: 222px;
+		@include background-image-retina('../img/brickyard', 'png', 155px, 222px);
+	}
+	nav {
+		background-position: 0 -78px;
+	}
+	@media screen and (max-width: 600px) {
+		h1 {
+			width: 280px;
+			height: 59px;
+			@include background-image-retina('../img/big-day-mobile', 'png', 280px, 59px);
+		}
+		.location {
+			display: block;
+			margin: 1em auto;
+		}
+		.roswell-united {
+			width: 155px;
+			height: 265px;
+			@include background-image-retina('../img/roswell-united-mobile', 'png', 155px, 265px);
+		}
+		.drive {
+			display: block;
+			margin: 0 auto;
+			vertical-align: top;
+			width: 217px;
+			height: 22px;
+			margin: 4em auto;
+			@include background-image-retina('../img/20-min-mobile', 'png', 217px, 22px);
+		}
+		.brickyard {
+			width: 155px;
+			height: 265px;
+			@include background-image-retina('../img/brickyard-mobile', 'png', 155px, 265px);
+		}
+	}
+}
+
+#rsvp {
+	h1, h3, h4 {
+		width: 227px;
+		height: 114px;
+		text-indent: -3000px;
+		overflow: hidden;
+		margin: 0 auto;
+		@include background-image-retina('../img/rsvp-title', 'png', 227px, 114px);
+		background-repeat: no-repeat;
+	}
+	h3 {
+		width: 440px;
+		height: 42px;
+		margin: 1em auto 0 auto;
+		@include background-image-retina('../img/rsvp-header', 'png', 440px, 42px);
+	}
+	footer {
+		width: 480px;
+		height: 64px;
+		margin: 0 auto;
+		@include background-image-retina('../img/rsvp-footer', 'png', 480px, 64px);
+		a {
+			display: inline-block;
+			position: relative;
+			top: 16px;
+			height: 42px;
+			margin: 0 20px;
+		}
+		.target {
+			width: 114px;
+			@include background-image-retina('../img/target', 'png', 114px, 42px);
+		}
+		.cb {
+			width: 130px;
+			@include background-image-retina('../img/crate-barrel', 'png', 130px, 42px);
+		}
+	}
+	.inner-form {
+		width: 326px;
+		padding: 20px;
+		background-color: #abd8dc;
+		margin: 0 auto;
+		border-left: 1px solid #6eadb4;
+		border-right: 1px solid #6eadb4;
+		em {
+			font-style: italic;
+			font-size: 11px;
+			color: #2d4b4f;
+		}
+		.code {
+			position: relative;
+		}
+		.error {
+			position: absolute;
+			top: 80px;
+			left: 0;
+			width: 100%;
+			font-size: 11px;
+			color: #2d4b4f;
+			figure {
+				position: relative;
+				top: 2px;
+				left: -5px;
+				display: inline-block;
+			}
+			a {
+				font-weight: bolder;
+				color: #e2260c;
+				text-decoration: none;
+			}
+		}
+		.rsvp-code {
+			text-align: left;
+			width: 200px;
+			margin: 2em auto;
+		}
+		p {
+			text-align: left;
+			font-style: italic;
+			color: #2d4b4f;
+			font-size: 11px;
+			line-height: 1.5em;
+			border-top: 1px solid #d5ecee;
+			padding-top: 2em;
+		}
+	}
+	@media screen and (max-width: 520px) {
+		h1 {
+			width: 198px;
+			height: 101px;
+			@include background-image-retina('../img/rsvp-title-mobile', 'png', 198px, 101px);
+		}
+		h3 {
+			position: relative;
+			width: 302px;
+			height: 29px;
+			margin-top: 1em;
+			@include background-image-retina('../img/rsvp-header-mobile', 'png', 302px, 29px);
+			z-index: 20;
+		}
+		.inner-form {
+			position: relative;
+			top: -13px;
+			width: 100%;
+			padding: 3em 0;
+			border-left: 0;
+			border-right: 0;
+			border-top: 1px solid #6eadb4;
+			border-bottom: 1px solid #6eadb4;
+			font-size: 9px;
+			z-index: 10;
+			.code {
+				margin: 0 10px;
+			}
+			p {
+				margin: 0 10px;
+			}
+		}
+		footer {
+			width: 100%;
+			height: 40px;
+			margin: 0;
+			border-top: 5px solid #e38683;
+			border-bottom: 5px solid #e38683;
+			background-image: none;
+			background-color: #c75d4f;
+			overflow: hidden;
+			a {
+				top: 0;
+				margin: 0 15px;
+			}
+		}
+	}
+}
+
+form {
+	text-align: left;
+	.form-name {
+		float: left;
+		input {
+			width: 145px;
+		}
+	}
+	.form-name:first-child {
+		margin-right: 10px;
+	}
+	.email {
+		clear: both;
+		padding-top: 0.5em;
+		input {
+			width: 313px; 
+		}
+	}
+	.attendees {
+		clear: both;
+		padding: 1em 0;
+		color: #ffffff;
+		font-size: 12px;
+		font-style: italic;
+		li {
+			float: left;
+			margin: 4px 10px 18px 0;
+		}
+		.text {
+			margin-top: 7px;
+			strong {
+				color: #417d85;
+				display: inline-block;
+				padding: 6px;
+				margin: 0 4px;
+				background-color: #c7ebee;
+				@include border-radius(5px);
+			}
+		}
+	}
+	.submit-container {
+		width: 100%;
+		margin-bottom: 1em;
+		text-align: right;
+		.submit {
+			padding: .5em 1em;
+			margin-right: 23px;
+		}
+	}
+	&.mobile {
+		.form-name input { width: 130px; }
+		.email input { width: 282px; }
+		.attendees { font-size: 9px; }
+		.submit-container {
+			margin-bottom: 0;
+			.submit {
+				margin-right: 6px;
+			}
+		}
+	}
+}
+
+input[type=text], textarea {
+	margin: 0;
+	padding: .5em;
+	border: 0;
+	color: #98a9ab;
+	background-color: #dceef0;
+	@include border-radius( 4px );
+	border: 1px solid #89adb0;
+	resize: none;
+}
+input[type=radio] {
+	position: relative;
+	top: 5px;
+	margin: 0 4px 0 0;
+	padding: 0;
+	border: 0;
+	width: 19px;
+	height: 19px;
+	cursor: pointer;
+	content: url('../img/checkbox.png');
+}
+input[type=radio]:checked { content: url('../img/checkbox-checked.png'); }
+.submit {
+	color: #ffffff;
+	text-transform: uppercase;
+	border: 1px solid #95757e;
+	padding: 0.5em;
+	font-weight: bolder;
+	@include border-radius( 4px );
+	@include background-gradient( #e48376, #cc6b5f );
+	cursor: pointer;
+	&:hover, &:active {
+		@include background-gradient( #cc6b5f, #e48376 );
+	}
+}
+input.entered, textarea {
+	color: #2d4b4f;
+}
+label {
+	font-size: 10px;
+	color: #417d85;
+	clear: both;
+	font-weight: bolder;
+	display: block;
+	text-transform: uppercase;
+	margin-bottom: 0.25em;
+	cursor: pointer;
+}
+textarea {
+	width: 313px;
+}
+form.mobile textarea { width: 282px; }

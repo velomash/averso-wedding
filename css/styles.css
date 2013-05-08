@@ -1,0 +1,680 @@
+@import url(http://fonts.googleapis.com/css?family=Tulpen+One);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  font-family: Verdana, tahoma, sans-serif; }
+
+section {
+  position: relative;
+  width: 100%;
+  padding-top: 28px; }
+  section .container {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    -webkit-transition-property: top;
+    -webkit-transition-duration: 20ms; }
+    section .container:after {
+      content: ".";
+      display: block;
+      height: 0;
+      clear: both;
+      visibility: hidden;
+      zoom: 1; }
+  section nav {
+    width: 40px;
+    height: 39px;
+    margin: 2em auto 0 auto;
+    cursor: pointer;
+    clear: both;
+    background-image: url("../img/nav-btns.png"); }
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      section nav {
+        background-image: url("../img/nav-btns@2x.png");
+        -webkit-background-size: 40px 39px; } }
+  section .edge {
+    position: absolute;
+    bottom: -19px;
+    left: 0;
+    display: block;
+    border: 0;
+    width: 100%;
+    height: 19px;
+    margin: 0;
+    background-image: url("../img/topper.png");
+    background-color: transparent;
+    background-repeat: repeat-x;
+    background-position: top left; }
+  @media screen and (max-width: 520px) {
+    section {
+      padding: 42px 0; }
+      section nav {
+        display: none; } }
+
+#countdown, #clothes, #directions {
+  background-color: #e8e8e8; }
+
+#their-story, #rsvp {
+  background-color: #7ac1c8; }
+
+#countdown h1 {
+  display: block;
+  width: 306px;
+  height: 457px;
+  font-size: 1px;
+  color: #E8E8E8;
+  margin: 0 auto;
+  background-image: url("../img/bride-and-groom.png");
+  background-position: top center;
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #countdown h1 {
+      background-image: url("../img/bride-and-groom@2x.png");
+      -webkit-background-size: 306px 457px; } }
+#countdown:before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 14px;
+  margin: 0;
+  background-image: url("../img/topper-dark.png");
+  background-repeat: repeat-x;
+  background-position: top left; }
+#countdown #wedding-time {
+  color: #837c7c;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1.5em 0;
+  display: block; }
+#countdown #until-wedding {
+  display: block;
+  width: 235px;
+  margin: 0 auto 0 auto;
+  font-family: 'Tulpen One', cursive;
+  font-size: 36px;
+  color: #bcbcbc; }
+  #countdown #until-wedding:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    zoom: 1; }
+  #countdown #until-wedding div {
+    display: block;
+    float: left;
+    width: 37px;
+    height: 57px;
+    padding-top: 7px;
+    margin: 0 5px;
+    background-image: url("../img/countdown-sprite.png");
+    background-position: no-repeat; }
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      #countdown #until-wedding div {
+        background-image: url("../img/countdown-sprite@2x.png");
+        -webkit-background-size: 37px 320px; } }
+  #countdown #until-wedding .days {
+    background-position: 0 -64px; }
+  #countdown #until-wedding .hours {
+    background-position: 0 -128px; }
+  #countdown #until-wedding .minutes {
+    background-position: 0 -192px; }
+  #countdown #until-wedding .seconds {
+    background-position: 0 -256px; }
+@media screen and (max-width: 520px) {
+  #countdown {
+    padding-top: 28px; }
+    #countdown h1 {
+      width: 240px;
+      height: 319px;
+      background-image: url("../img/bride-and-groom-mobile.png"); }
+    #countdown #wedding-time {
+      margin: 1em 0; } }
+    @media screen and (max-width: 520px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 520px) and (-moz-min-device-pixel-ratio: 2) {
+      #countdown h1 {
+        background-image: url("../img/bride-and-groom-mobile@2x.png");
+        -webkit-background-size: 240px 319px; } }
+
+#their-story .portrait {
+  width: 180px;
+  float: left;
+  margin: 0 56px; }
+  #their-story .portrait figure {
+    margin: 1em 0; }
+#their-story .story {
+  width: 375px;
+  float: left;
+  margin-bottom: 2em; }
+  #their-story .story h2 {
+    position: relative;
+    width: 248px;
+    height: 99px;
+    text-indent: -3000px;
+    overflow: hidden;
+    margin: 0 auto;
+    background-image: url("../img/their-story.png");
+    background-repeat: no-repeat;
+    background-position: top center; }
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      #their-story .story h2 {
+        background-image: url("../img/their-story@2x.png");
+        -webkit-background-size: 248px 99px; } }
+  #their-story .story h4 {
+    position: relative;
+    width: 240px;
+    height: 20px;
+    top: 11px;
+    text-indent: -3000px;
+    overflow: hidden;
+    background-image: url("../img/their-story-banner.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    margin: 1em auto 0 auto; }
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      #their-story .story h4 {
+        background-image: url("../img/their-story-banner@2x.png");
+        -webkit-background-size: 240px 20px; } }
+  #their-story .story .story-text {
+    border-top: 2px dotted white;
+    border-bottom: 2px dotted white;
+    padding: 1em 0; }
+  #their-story .story p {
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 1.5em;
+    text-align: left;
+    margin: 1em 0; }
+#their-story .edge {
+  background-position: 0 -19px; }
+#their-story nav {
+  background-position: 0 -39px; }
+@media screen and (max-width: 1000px) {
+  #their-story .portrait {
+    display: none; }
+  #their-story .story {
+    float: none;
+    margin: 0 auto; } }
+@media screen and (max-width: 400px) {
+  #their-story .story {
+    width: 300px;
+    font-size: 9px; } }
+
+#clothes h1 {
+  width: 445px;
+  height: 93px;
+  text-indent: -3000px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url("../img/big-day.png");
+  background-repeat: no-repeat;
+  background-position: top center; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #clothes h1 {
+      background-image: url("../img/big-day@2x.png");
+      -webkit-background-size: 445px 93px; } }
+#clothes h3 {
+  max-width: 509px;
+  height: 20px;
+  text-indent: -3000px;
+  overflow: hidden;
+  background-image: url("../img/semi-formal-banner.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin: 1em auto 2em auto; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #clothes h3 {
+      background-image: url("../img/semi-formal-banner@2x.png");
+      -webkit-background-size: 509px 20px; } }
+#clothes figure {
+  width: 363px;
+  height: 384px;
+  margin: 0 auto;
+  background-image: url("../img/clothes.png");
+  background-repeat: no-repeat;
+  background-position: top center; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #clothes figure {
+      background-image: url("../img/clothes@2x.png");
+      -webkit-background-size: 363px 384px; } }
+#clothes nav {
+  background-position: 0 -78px; }
+@media screen and (max-width: 600px) {
+  #clothes h1 {
+    width: 280px;
+    height: 59px;
+    background-image: url("../img/big-day-mobile.png"); }
+  #clothes figure {
+    width: 261px;
+    height: 289px;
+    background-image: url("../img/clothes-mobile.png"); } }
+  @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 600px) and (-moz-min-device-pixel-ratio: 2) {
+    #clothes h1 {
+      background-image: url("../img/big-day-mobile@2x.png");
+      -webkit-background-size: 280px 59px; } }
+  @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 600px) and (-moz-min-device-pixel-ratio: 2) {
+    #clothes figure {
+      background-image: url("../img/clothes-mobile@2x.png");
+      -webkit-background-size: 261px 289px; } }
+
+#directions h1 {
+  width: 445px;
+  height: 93px;
+  text-indent: -3000px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url("../img/big-day.png");
+  background-repeat: no-repeat;
+  background-position: top center; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #directions h1 {
+      background-image: url("../img/big-day@2x.png");
+      -webkit-background-size: 445px 93px; } }
+#directions h3 {
+  max-width: 509px;
+  height: 20px;
+  text-indent: -3000px;
+  overflow: hidden;
+  background-image: url("../img/where-banner.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  margin: 1em auto 2em auto; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #directions h3 {
+      background-image: url("../img/where-banner@2x.png");
+      -webkit-background-size: 509px 20px; } }
+#directions .location, #directions .drive {
+  display: inline-block;
+  margin: 0 1em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-indent: -3000px;
+  overflow: hidden; }
+#directions .roswell-united {
+  width: 155px;
+  height: 222px;
+  background-image: url("../img/roswell-united.png"); }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #directions .roswell-united {
+      background-image: url("../img/roswell-united@2x.png");
+      -webkit-background-size: 155px 222px; } }
+#directions .drive {
+  vertical-align: top;
+  width: 112px;
+  height: 150px;
+  background-image: url("../img/20-min.png"); }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #directions .drive {
+      background-image: url("../img/20-min@2x.png");
+      -webkit-background-size: 112px 37px; } }
+#directions .brickyard {
+  width: 155px;
+  height: 222px;
+  background-image: url("../img/brickyard.png"); }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #directions .brickyard {
+      background-image: url("../img/brickyard@2x.png");
+      -webkit-background-size: 155px 222px; } }
+#directions nav {
+  background-position: 0 -78px; }
+@media screen and (max-width: 600px) {
+  #directions h1 {
+    width: 280px;
+    height: 59px;
+    background-image: url("../img/big-day-mobile.png"); }
+  #directions .location {
+    display: block;
+    margin: 1em auto; }
+  #directions .roswell-united {
+    width: 155px;
+    height: 265px;
+    background-image: url("../img/roswell-united-mobile.png"); }
+  #directions .drive {
+    display: block;
+    margin: 0 auto;
+    vertical-align: top;
+    width: 217px;
+    height: 22px;
+    margin: 4em auto;
+    background-image: url("../img/20-min-mobile.png"); }
+  #directions .brickyard {
+    width: 155px;
+    height: 265px;
+    background-image: url("../img/brickyard-mobile.png"); } }
+  @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 600px) and (-moz-min-device-pixel-ratio: 2) {
+    #directions h1 {
+      background-image: url("../img/big-day-mobile@2x.png");
+      -webkit-background-size: 280px 59px; } }
+  @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 600px) and (-moz-min-device-pixel-ratio: 2) {
+    #directions .roswell-united {
+      background-image: url("../img/roswell-united-mobile@2x.png");
+      -webkit-background-size: 155px 265px; } }
+  @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 600px) and (-moz-min-device-pixel-ratio: 2) {
+    #directions .drive {
+      background-image: url("../img/20-min-mobile@2x.png");
+      -webkit-background-size: 217px 22px; } }
+  @media screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 600px) and (-moz-min-device-pixel-ratio: 2) {
+    #directions .brickyard {
+      background-image: url("../img/brickyard-mobile@2x.png");
+      -webkit-background-size: 155px 265px; } }
+
+#rsvp h1, #rsvp h3, #rsvp h4 {
+  width: 227px;
+  height: 114px;
+  text-indent: -3000px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-image: url("../img/rsvp-title.png");
+  background-repeat: no-repeat; }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #rsvp h1, #rsvp h3, #rsvp h4 {
+      background-image: url("../img/rsvp-title@2x.png");
+      -webkit-background-size: 227px 114px; } }
+#rsvp h3 {
+  width: 440px;
+  height: 42px;
+  margin: 1em auto 0 auto;
+  background-image: url("../img/rsvp-header.png"); }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #rsvp h3 {
+      background-image: url("../img/rsvp-header@2x.png");
+      -webkit-background-size: 440px 42px; } }
+#rsvp footer {
+  width: 480px;
+  height: 64px;
+  margin: 0 auto;
+  background-image: url("../img/rsvp-footer.png"); }
+  @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+    #rsvp footer {
+      background-image: url("../img/rsvp-footer@2x.png");
+      -webkit-background-size: 480px 64px; } }
+  #rsvp footer a {
+    display: inline-block;
+    position: relative;
+    top: 16px;
+    height: 42px;
+    margin: 0 20px; }
+  #rsvp footer .target {
+    width: 114px;
+    background-image: url("../img/target.png"); }
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      #rsvp footer .target {
+        background-image: url("../img/target@2x.png");
+        -webkit-background-size: 114px 42px; } }
+  #rsvp footer .cb {
+    width: 130px;
+    background-image: url("../img/crate-barrel.png"); }
+    @media (-webkit-min-device-pixel-ratio: 2), (-moz-min-device-pixel-ratio: 2) {
+      #rsvp footer .cb {
+        background-image: url("../img/crate-barrel@2x.png");
+        -webkit-background-size: 130px 42px; } }
+#rsvp .inner-form {
+  width: 326px;
+  padding: 20px;
+  background-color: #abd8dc;
+  margin: 0 auto;
+  border-left: 1px solid #6eadb4;
+  border-right: 1px solid #6eadb4; }
+  #rsvp .inner-form em {
+    font-style: italic;
+    font-size: 11px;
+    color: #2d4b4f; }
+  #rsvp .inner-form .code {
+    position: relative; }
+  #rsvp .inner-form .error {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    font-size: 11px;
+    color: #2d4b4f; }
+    #rsvp .inner-form .error figure {
+      position: relative;
+      top: 2px;
+      left: -5px;
+      display: inline-block; }
+    #rsvp .inner-form .error a {
+      font-weight: bolder;
+      color: #e2260c;
+      text-decoration: none; }
+  #rsvp .inner-form .rsvp-code {
+    text-align: left;
+    width: 200px;
+    margin: 2em auto; }
+  #rsvp .inner-form p {
+    text-align: left;
+    font-style: italic;
+    color: #2d4b4f;
+    font-size: 11px;
+    line-height: 1.5em;
+    border-top: 1px solid #d5ecee;
+    padding-top: 2em; }
+@media screen and (max-width: 520px) {
+  #rsvp h1 {
+    width: 198px;
+    height: 101px;
+    background-image: url("../img/rsvp-title-mobile.png"); }
+  #rsvp h3 {
+    position: relative;
+    width: 302px;
+    height: 29px;
+    margin-top: 1em;
+    background-image: url("../img/rsvp-header-mobile.png");
+    z-index: 20; }
+  #rsvp .inner-form {
+    position: relative;
+    top: -13px;
+    width: 100%;
+    padding: 3em 0;
+    border-left: 0;
+    border-right: 0;
+    border-top: 1px solid #6eadb4;
+    border-bottom: 1px solid #6eadb4;
+    font-size: 9px;
+    z-index: 10; }
+    #rsvp .inner-form .code {
+      margin: 0 10px; }
+    #rsvp .inner-form p {
+      margin: 0 10px; }
+  #rsvp footer {
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    border-top: 5px solid #e38683;
+    border-bottom: 5px solid #e38683;
+    background-image: none;
+    background-color: #c75d4f;
+    overflow: hidden; }
+    #rsvp footer a {
+      top: 0;
+      margin: 0 15px; } }
+  @media screen and (max-width: 520px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 520px) and (-moz-min-device-pixel-ratio: 2) {
+    #rsvp h1 {
+      background-image: url("../img/rsvp-title-mobile@2x.png");
+      -webkit-background-size: 198px 101px; } }
+  @media screen and (max-width: 520px) and (-webkit-min-device-pixel-ratio: 2), screen and (max-width: 520px) and (-moz-min-device-pixel-ratio: 2) {
+    #rsvp h3 {
+      background-image: url("../img/rsvp-header-mobile@2x.png");
+      -webkit-background-size: 302px 29px; } }
+
+form {
+  text-align: left; }
+  form .form-name {
+    float: left; }
+    form .form-name input {
+      width: 145px; }
+  form .form-name:first-child {
+    margin-right: 10px; }
+  form .email {
+    clear: both;
+    padding-top: 0.5em; }
+    form .email input {
+      width: 313px; }
+  form .attendees {
+    clear: both;
+    padding: 1em 0;
+    color: #ffffff;
+    font-size: 12px;
+    font-style: italic; }
+    form .attendees li {
+      float: left;
+      margin: 4px 10px 18px 0; }
+    form .attendees .text {
+      margin-top: 7px; }
+      form .attendees .text strong {
+        color: #417d85;
+        display: inline-block;
+        padding: 6px;
+        margin: 0 4px;
+        background-color: #c7ebee;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px; }
+  form .submit-container {
+    width: 100%;
+    margin-bottom: 1em;
+    text-align: right; }
+    form .submit-container .submit {
+      padding: .5em 1em;
+      margin-right: 23px; }
+  form.mobile .form-name input {
+    width: 130px; }
+  form.mobile .email input {
+    width: 282px; }
+  form.mobile .attendees {
+    font-size: 9px; }
+  form.mobile .submit-container {
+    margin-bottom: 0; }
+    form.mobile .submit-container .submit {
+      margin-right: 6px; }
+
+input[type=text], textarea {
+  margin: 0;
+  padding: .5em;
+  border: 0;
+  color: #98a9ab;
+  background-color: #dceef0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  border: 1px solid #89adb0;
+  resize: none; }
+
+input[type=radio] {
+  position: relative;
+  top: 5px;
+  margin: 0 4px 0 0;
+  padding: 0;
+  border: 0;
+  width: 19px;
+  height: 19px;
+  cursor: pointer;
+  content: url("../img/checkbox.png"); }
+
+input[type=radio]:checked {
+  content: url("../img/checkbox-checked.png"); }
+
+.submit {
+  color: #ffffff;
+  text-transform: uppercase;
+  border: 1px solid #95757e;
+  padding: 0.5em;
+  font-weight: bolder;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  background: #e48376;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #e48376 0%, #cc6b5f 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e48376), color-stop(100%, #cc6b5f));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #e48376 0%, #cc6b5f 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #e48376 0%, #cc6b5f 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #e48376 0%, #cc6b5f 100%);
+  /* IE10+ */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e48376', endColorstr='#cc6b5f',GradientType=0 );
+  /* IE6-8 */
+  cursor: pointer; }
+  .submit:hover, .submit:active {
+    background: #cc6b5f;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #cc6b5f 0%, #e48376 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc6b5f), color-stop(100%, #e48376));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #cc6b5f 0%, #e48376 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #cc6b5f 0%, #e48376 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #cc6b5f 0%, #e48376 100%);
+    /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc6b5f', endColorstr='#e48376',GradientType=0 );
+    /* IE6-8 */ }
+
+input.entered, textarea {
+  color: #2d4b4f; }
+
+label {
+  font-size: 10px;
+  color: #417d85;
+  clear: both;
+  font-weight: bolder;
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: 0.25em;
+  cursor: pointer; }
+
+textarea {
+  width: 313px; }
+
+form.mobile textarea {
+  width: 282px; }

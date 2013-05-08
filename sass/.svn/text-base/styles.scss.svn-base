@@ -1,0 +1,7 @@
+@import 'reset';
+@import 'mixins';
+
+html, body, .map-content, #map-canvas {
+	width: 100%;
+	height: 100%;
+}
